@@ -12,4 +12,8 @@
  */
 class JobeetJob extends BaseJobeetJob
 {
+  public function __toString()
+  {
+    return sprintf('%s at %s (%s)', $this->position, $this->company, $this->location);
+  }
 }
