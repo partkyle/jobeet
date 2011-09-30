@@ -4,10 +4,10 @@
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
+  param: { module: job, action: index }
 
 job_show_route:
-  url: /job/:company/:location/:id/:position
+  url: /job/:company_slug/:location_slug/:id/:position_slug
   class: sfDoctrineRoute
   options:
     model: JobeetJob
