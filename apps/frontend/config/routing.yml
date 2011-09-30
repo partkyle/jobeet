@@ -20,6 +20,16 @@ job_show_route:
     id: \d+
     sf_method: [get]
 
+category:
+  url: /category/:slug
+  class: sfDoctrineRoute
+  options:
+    model: JobeetCategory
+    type: object
+  param:
+    module: job
+    action: show
+
 # generic rules
 # please, remove them by adding more specific rules
 default_index:
