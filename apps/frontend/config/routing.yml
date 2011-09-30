@@ -6,6 +6,19 @@ homepage:
   url:   /
   param: { module: default, action: index }
 
+job_show_route:
+  url: /job/:company/:location/:id/:position
+  class: sfDoctrineRoute
+  options:
+    model: JobeetJob
+    type: object
+  param:
+    module: job
+    action: show
+  requirements:
+    id: \d+
+    sf_method: [get]
+
 # generic rules
 # please, remove them by adding more specific rules
 default_index:

@@ -9,7 +9,7 @@
     <tr class="<?php echo fmod($i, 2) ? 'even' : 'odd' ?>">
       <td class="location"><?php echo $job->location ?></td>
       <td class="position">
-        <a href = "<?php echo url_for('job/show?id='.$job->id) ?>">
+        <a href = "<?php echo url_for('job_show_route', $job) ?>">
           <?php echo $job->position ?>
         </a>
       </td>
