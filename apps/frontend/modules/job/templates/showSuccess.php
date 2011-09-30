@@ -1,6 +1,8 @@
 <!-- apps/frontend/modules/job/templates/showSuccess.php -->
 <?php use_stylesheet('job.css') ?>
 <?php use_helper('Text') ?>
+
+<?php slot('title', sprintf('%s is looking for a %s', $job->company, $job->position)) ?>
  
 <div id="job">
   <h1><?php echo $job->getCompany() ?></h1>
@@ -24,8 +26,7 @@
   </div>
  
   <h4>How to apply?</h4>
- 
-  <p class="how_to_apply"><?php echo $job->getHowToApply() ?></p>
+   <p class="how_to_apply"><?php echo $job->getHowToApply() ?></p>
  
   <div class="meta">
     <small>posted on <?php echo $job->getDateTimeObject('created_at')->format('m/d/Y') ?></small>
