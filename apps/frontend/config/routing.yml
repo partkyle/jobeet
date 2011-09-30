@@ -12,6 +12,7 @@ job_show_route:
   options:
     model: JobeetJob
     type: object
+    method_for_query: retrieveActiveJob
   param:
     module: job
     action: show
