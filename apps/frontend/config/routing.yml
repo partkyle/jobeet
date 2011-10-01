@@ -23,12 +23,12 @@ job_show_route:
 category:
   url: /category/:slug
   class: sfDoctrineRoute
+  param:
+    module: category
+    action: show
   options:
     model: JobeetCategory
     type: object
-  param:
-    module: job
-    action: show
 
 # generic rules
 # please, remove them by adding more specific rules

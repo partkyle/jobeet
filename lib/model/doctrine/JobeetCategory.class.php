@@ -29,5 +29,5 @@ class JobeetCategory extends BaseJobeetCategory
 			->where('j.category_id = ?', $this->id);
 
 		return Doctrine_Core::getTable('JobeetJob')->countActiveJobs($q);
-	}
+  }
 }
