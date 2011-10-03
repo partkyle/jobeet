@@ -53,3 +53,19 @@ $browser->info('1 - The homepage')->
       $browser->getMostRecentProgrammingJob()->getId()))->
   end()
 ;
+
+$job = $browser->getMostRecentProgrammingJob();
+
+$browser->info('2 - The job page')->
+  get('/')->
+  info('  2.1 - Each job on the homepage is clickable and give detailed information')->
+  click('Web Developer', array(), array('position' => 1))->
+  with('request')->begin()->
+    isParameter('module', 'job')->
+    isParameter('action', 'show')->
+    isParameter('company_slug', $job->getCompanySlug())->
+    isParameter('location_slug', $job->getLocationSlug())->
+    isParameter('position_slug', $job->getPositionSlug())->
+    isParameter('id', $job->getId())->
+  end()
+;
