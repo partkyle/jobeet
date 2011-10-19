@@ -6,6 +6,11 @@ homepage:
   url:   /
   param: { module: job, action: index }
 
+job:
+  class:   sfDoctrineRouteCollection
+  options: 
+    model: JobeetJob
+
 job_show_route:
   url: /job/:company_slug/:location_slug/:id/:position_slug
   class: sfDoctrineRoute
