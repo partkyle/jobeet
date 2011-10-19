@@ -24,4 +24,4 @@
 	<?php endforeach; ?>
 </div>
 
-<a href="<?php echo url_for('job/new') ?>">New</a>
+<a href="<?php echo url_for('job_new') ?>">New</a>
