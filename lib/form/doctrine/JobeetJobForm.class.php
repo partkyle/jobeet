@@ -41,7 +41,7 @@ class JobeetJobForm extends BaseJobeetJobForm
     ));
 
     $this->validatorSchema['type'] = new sfValidatorChoice(array(
-      'choices' => Doctrine_Core::getTable('JobeetJob')->getTypes(),
+      'choices' => array_keys(Doctrine_Core::getTable('JobeetJob')->getTypes()),
     ));
 
     $this->widgetSchema['logo'] = new sfWidgetFormInputFile(array(
